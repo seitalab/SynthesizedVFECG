@@ -1,0 +1,44 @@
+feat_select: 
+  param_type: fixed
+  param_val: fc
+emb_dim: 
+  param_type: fixed
+  param_val: 64
+depth:
+  param_type: hps
+  param_val: 
+    - discrete_uniform
+    - 3
+    - 6
+    - 1
+heads:
+  param_type: hps
+  param_val: 
+    - int_pow
+    - 4
+    - 6
+    - 2    
+ff_dim:
+  param_type: hps
+  param_val: 
+    - int_pow
+    - 5
+    - 8
+    - 2  
+lin_chunk_len:
+  param_type: hps
+  param_val: 
+    - categorical
+    - [50, 100, 250]
+
+qkv_dim:
+  param_type: hps
+  param_val: 
+    - int_pow
+    - 4
+    - 6
+    - 2    
+
+attn_type:
+  param_type: fixed
+  param_val: softmax_attn

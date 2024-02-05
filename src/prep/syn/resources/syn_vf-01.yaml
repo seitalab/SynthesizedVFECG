@@ -1,0 +1,120 @@
+
+params:
+  peak:
+    base:
+      shift: null
+      val: 1.0
+    base_perturb:
+      type: normal
+      sdev: 0.2
+  peak_scale:
+    base:
+      shift: null
+      val: 2.
+    base_perturb:
+      type: normal
+      sdev: 0.2
+  
+  width: 
+    base:
+      shift: null
+      val: 0.0025
+    base_perturb:
+      type: normal
+      sdev: 0.0001
+  width_scale: 
+    base:
+      shift: null
+      val: 10
+    base_perturb:
+      type: normal
+      sdev: 1
+
+  shift: 
+    base:
+      shift: null
+      val: 0.025
+    base_perturb:
+      type: normal
+      sdev: 0.001
+  shift_scale: 
+    base:
+      shift: null
+      val: 0.1
+    base_perturb:
+      type: uniform
+      min: 0.005
+      max: 0.05
+
+  wn1_width: 
+    base:
+      shift: null
+      val: 10
+    base_perturb:
+      type: normal
+      sdev: 1
+    beat_perturb:
+      type: normal
+      sdev: 0.5
+  wn1_scaler: 
+    base:
+      shift: null
+      val: 100
+    base_perturb:
+      type: normal
+      sdev: 10
+    beat_perturb:
+      type: normal
+      sdev: 5
+  wn2_width: 
+    base:
+      shift: null
+      val: 3
+    base_perturb:
+      type: normal
+      sdev: 0.3
+    beat_perturb:
+      type: normal
+      sdev: 0.15
+  wn2_scaler: 
+    base:
+      shift: null
+      val: 200
+    base_perturb:
+      type: normal
+      sdev: 20
+    beat_perturb:
+      type: normal
+      sdev: 2
+
+  base_scale: 
+    base:
+      shift: null
+      val: 0.5
+    base_perturb:
+      type: normal
+      sdev: 0.25
+    beat_perturb:
+      type: normal
+      sdev: 0.05
+
+augment_params:
+  scale:
+    max: 4
+    min: 0.25
+  sine:
+    m_max: 1
+    m_min: 0
+    f_max: 0.02
+    f_min: 0.001
+  wn:
+    m_max: 0.05
+    m_min: 0
+    f_max: 0.02
+    f_min: 0.001
+  sine:
+    m_max: 1
+    m_min: 0
+    f_max: 0.02
+    f_min: 0.001
+

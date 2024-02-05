@@ -1,0 +1,21 @@
+feat_select: 
+  param_type: fixed
+  param_val: fc
+distil: 
+  param_type: fixed
+  param_val: False
+emb_dim: 
+  param_type: fixed
+  param_val: 128
+depth:
+  param_type: fixed
+  param_val: 4
+heads:
+  param_type: fixed
+  param_val: 32
+ff_dim:
+  param_type: fixed
+  param_val: 128
+lin_chunk_len:
+  param_type: fixed
+  param_val: 50

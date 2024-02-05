@@ -1,0 +1,25 @@
+
+rnn_depth:
+  param_type: hps
+  param_val: 
+    - discrete_uniform
+    - 1
+    - 4
+    - 1
+rnn_hidden:
+  param_type: hps
+  param_val: 
+    - int_pow
+    - 4
+    - 8
+    - 2
+
+lin_chunk_len:
+  param_type: hps
+  param_val: 
+    - categorical
+    - [50, 100, 250]
+
+emb_dim:
+  param_type: fixed
+  param_val: 64

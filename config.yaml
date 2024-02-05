@@ -1,0 +1,96 @@
+
+experiment:
+  
+  dataset_dx:
+    ptbxl:
+      - vf    
+
+  seed:
+    pretrain: 7
+    hps: 6
+    multirun:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+
+  result_cols:
+    - score
+    - loss
+
+  path: 
+    save_root: <path/to/dataset>
+    data_root: <path/to/dataset>
+    yaml_loc: ./resources/exp_yamls
+    pretrain_yaml_loc: ./resources/pretrain_yamls
+
+slack:
+  token: <EMPTY>
+  channel: <EMPTY>
+  channel_id: <EMPTY>
+  max_past: 100
+
+split:
+
+  test:
+    seed: 123
+    size: 0.2
+
+  train_val:
+    seeds:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    size: 0.2
+    
+# settings for data prep.
+settings:
+  
+  common:
+    save_root: 
+    syncfg_root: resources
+
+    duration: 10
+    target_freq: 500
+    val_size: 0.9
+
+    max_process_time: 5
+    # n_syn: 115000 # 100000 + a for training set.
+    n_syn: 1150000
+
+  cardially:
+
+    src: <path/to/dataset>/Cardially/dataset/txt
+
+  g12ec:
+
+    src: <path/to/dataset>/G12EC/WFDB
+
+    dx_to_code:
+
+      NormalSinus: 426783006
+      Afib: 164889003
+      VPB: 17338001
+
+      ALL: 0
+    
+    lead_idx: 1
+
+  ptbxl:
+
+    src: <path/to/dataset>/PTBXL/1.0.1/ptbxl/records500
+
+    lead_idx: 1
+
+  syn_ecg:
+
+    syncfg: syn_ecg-04 # same setting with `syn_ecg-02`: Larger dataset size.
+
+  syn_vf:
+    
+    syncfg: syn_vf-01

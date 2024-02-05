@@ -1,0 +1,33 @@
+emb_dim: 
+  param_type: hps
+  param_val:
+    - int_pow
+    - 3
+    - 6
+    - 2
+depth:
+  param_type: hps
+  param_val: 
+    - discrete_uniform
+    - 1
+    - 4
+    - 1
+heads:
+  param_type: hps
+  param_val: 
+    - int_pow
+    - 2
+    - 6
+    - 2
+ff_dim:
+  param_type: hps
+  param_val: 
+    - int_pow
+    - 2
+    - 6
+    - 2  
+lin_chunk_len:
+  param_type: hps
+  param_val: 
+    - categorical
+    - [50, 100, 250, 500]

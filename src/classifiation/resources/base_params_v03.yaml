@@ -1,0 +1,58 @@
+# Common
+num_lead:
+  param_type: fixed
+  param_val: 1
+
+
+# Training setting params.
+eval_every:  
+  param_type: fixed
+  param_val: 5
+patience:  
+  param_type: fixed
+  param_val: 5
+
+learning_rate: 
+  param_type: hps
+  param_val: 
+    - log_uniform
+    - 0.00001
+    - 0.005
+weight_decay:  
+  param_type: fixed
+  param_val: 0.01
+optimizer:  
+  param_type: fixed
+  param_val: adam
+optimizer_patience:  
+  param_type: fixed
+  param_val: 5
+
+# Data processing params.
+freq: 
+  param_type: fixed
+  param_val: 500
+downsample: 
+  param_type: fixed
+  param_val: 1
+mask_ratio:
+  param_type: hps
+  param_val: 
+    - uniform
+    - 0
+    - 0.5
+max_shift_ratio:
+  param_type: hps
+  param_val: 
+    - uniform
+    - 0
+    - 0.75
+
+# Common model params.
+backbone_out_dim:  
+  param_type: hps
+  param_val: 
+    - int_pow
+    - 4
+    - 10
+    - 2
